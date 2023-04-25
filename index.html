@@ -13,11 +13,12 @@
 		<style media="screen">
 			#container {
 				margin: 20px;
-				border: ridge green 10px;
 				padding: 15px;
 				background-color: #002;
 				color: whitesmoke;
 				font-size: 20px;
+				border: ridge 10px;
+				animation: border-animation 20s infinite alternate linear;
 			}
 			body {
 				margin-top: 0px;
@@ -60,6 +61,17 @@
 			}
 			#samplewebpage p {
 				margin: 2px;
+			}
+			@keyframes border-animation {
+				0% {
+					border-color: hsl(30,90%,40%);
+				}
+				50% {
+					border-color: hsl(110,90%,50%);
+				}
+				100% {
+					border-color: hsl(220,90%,50%);
+				}
 			}
 		</style>
 	</head>
