@@ -8,10 +8,12 @@
 	width: 50vw;
 	height: calc(50vw * var(--height) / var(--width));
 	grid-template: repeat(var(--height), 1fr) / repeat(var(--width), 1fr);
+	background-color: #FFFFFF15;
+	border-radius: 5px;
 }
 #icon-box a {
-	margin: 3%;
-	/* border: 3px solid green; */
+	padding: 4px;
+	display: flex;
 	grid-area: var(--y) / var(--x) / span var(--size) / span var(--size);
 }
 #icon-box a img {
@@ -19,7 +21,7 @@
 	transition: transform 500ms;
 }
 #icon-box a img:hover {
-	transform: scale(1.1);
+	transform: scale(1.1) translateY(-3px);
 }
 .size-4 {
 	--size: span 4;
