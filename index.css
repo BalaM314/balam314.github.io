@@ -47,9 +47,6 @@ html {
 	height: 100%;
 	overflow: hidden;
 }
-code {
-	background-color: #CC8;
-}
 h1 {
 	color: #CCF;
 }
@@ -59,23 +56,11 @@ h2 {
 h3 {
 	color: #E02;
 }
-span h1 {
-	color: #000 !important;
+a {
+	color: rgb(0, 196, 0);
 }
-span h2 {
-	color: #000 !important;
-}
-span h3 {
-	color: #000 !important;
-}
-#samplewebpage {
-	padding: 15px;
-	background-color: #DD8;
-	width: 430px;
-	font-family: monospace;
-}
-#samplewebpage p {
-	margin: 2px;
+a:hover {
+	color: rgb(0, 236, 0);
 }
 @keyframes border-animation {
 	0% {
