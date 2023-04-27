@@ -1,3 +1,29 @@
+:root {
+	font-family: sans-serif;
+}
+#icon-box {
+	--width: 9;
+	--height: 6;
+	display: grid;
+	width: 50vw;
+	height: calc(50vw * var(--height) / var(--width));
+	grid-template: repeat(var(--height), 1fr) / repeat(var(--width), 1fr);
+}
+#icon-box a {
+	margin: 3%;
+	/* border: 3px solid green; */
+	grid-area: var(--y) / var(--x) / span var(--size) / span var(--size);
+}
+#icon-box a img {
+	transform: scale(1.0);
+	transition: transform 500ms;
+}
+#icon-box a img:hover {
+	transform: scale(1.1);
+}
+.size-4 {
+	--size: span 4;
+}
 #container {
 	margin: 20px;
 	padding: 15px;
