@@ -6,24 +6,32 @@
 	--height: 6;
 	display: grid;
 	width: 50vw;
+	gap: 5px;
 	height: calc(50vw * var(--height) / var(--width));
 	grid-template: repeat(var(--height), 1fr) / repeat(var(--width), 1fr);
 	background-color: #FFFFFF15;
 	border-radius: 5px;
 }
-#icon-box a {
-	padding: 4px;
-	display: flex;
+#icon-box div {
 	grid-area: var(--y) / var(--x) / span var(--size) / span var(--size);
-}
-#icon-box a img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 4px;
+	overflow: hidden;
+
 	transform: scale(1.0);
 	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-	transition: transform 500ms;
+	transition: all 500ms;
 }
-#icon-box a img:hover {
+#icon-box div:hover {
 	transform: scale(1.1) translateY(-3px);
 	box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+}
+#icon-box div a {
+	width: 100%; height: 100%;
 }
 #header-text {
 	display: flex;
