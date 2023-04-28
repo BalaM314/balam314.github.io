@@ -26,7 +26,7 @@
 	transition: all 500ms;
 }
 #icon-box div:hover {
-	transform: scale(1.1) translateY(-3px);
+	transform: scale(calc(1 + 0.3 / (0.7 * var(--size)))) translateY(-5px);
 	box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 }
 #icon-box div a {
