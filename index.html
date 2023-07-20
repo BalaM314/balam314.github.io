@@ -87,8 +87,8 @@
 					<a href="https://www.python.org/" target="_blank">
 					</a>
 				</div> 
-				<div style="--x:9; --y:6; --size:1; filter:opacity(0.2); background-image:url('https://raw.githubusercontent.com/BalaM314/flarogus-texture/master/sprites-override/units/flare.png')">
-					<a href="https://flarogus.dev/" target="_blank" onclick="event.preventDefault(); window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+				<div style="--x:9; --y:6; --size:1; filter:opacity(0.2); background-image:url('https://raw.githubusercontent.com/BalaM314/flarogus-texture/master/sprites-override/units/flare.png')" id="flarogus-image">
+					<a href="https://flarogus.dev/" target="_blank">
 					</a>
 				</div> 
 			</div>
@@ -132,5 +132,11 @@
 				<li><a href="https://github.com/BalaM314/directional-router-mod">Directional Router</a>: a Mindustry mod that adds an Erekir-style directional router to Serpulo.</li>
 			</ul>
 		</div>
+		<script>
+			document.querySelector("#flarogus-image").addEventListener("click", event => {
+				event.preventDefault();
+				window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+			});
+		</script>
 	</body>
 </html>
