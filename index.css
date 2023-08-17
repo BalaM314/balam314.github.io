@@ -2,8 +2,6 @@
 	font-family: sans-serif;
 }
 #icon-box {
-	--width: 9;
-	--height: 6;
 	display: grid;
 	width: 50vw;
 	gap: 5px;
