@@ -4,9 +4,9 @@
 #icon-box {
 	display: grid;
 	width: 50vw;
-	gap: 5px;
 	height: calc(50vw * var(--height) / var(--width));
 	grid-template: repeat(var(--height), 1fr) / repeat(var(--width), 1fr);
+	gap: 5px;
 	background-color: #FFFFFF15;
 	border-radius: 5px;
 }
@@ -41,14 +41,26 @@
 #container {
 	margin: 20px;
 	padding: 15px;
-	background-color: #002;
+	background-color: #0039;
 	color: whitesmoke;
 	font-size: 20px;
 	border: ridge 10px;
 	animation: border-animation 20s infinite alternate linear;
 }
+@media screen and (max-width: 600px) {
+	#container {
+		margin: 0px;
+		padding: 15px 1.5vw;
+		border-width: 2vw;
+		background-color: #0046;
+	}
+	#icon-box {
+		width: 93vw;
+		height: calc(93vw * var(--height) / var(--width));
+	}
+}
 body {
-	margin-top: 0px;
+	margin: 0px;
 	background-image: url("starfield.png");
 	background-repeat: no-repeat;
 	background-color: #000;
