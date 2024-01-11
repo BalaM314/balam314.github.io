@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="BalaM314's canvas sandbox" />
+		<meta property="og:title" content="HTML5 Canvas Sandbox" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://balam314.github.io/logo.png" />
+		<meta property="og:description" content="BalaM314's canvas" />
+		<meta name="theme-color" content="#3141FF">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HTML5 Canvas Sandbox</title>
+		<style media="screen">
+			canvas {
+				border: ridge green 5px;
+				box-sizing: border-box;
+				background-color: black;
+				margin: 0px;
+			}
+			body {
+				overflow: hidden;
+				margin: 0;
+				background-color: rgb(0, 0, 0);
+				background-image: repeating-linear-gradient(135deg, #000, #038, #000, #038, #000, #038, #000, #038);
+				color: whitesmoke;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas width=600 height=600 id="canvas1"></canvas><br>
+		<script type="text/javascript">
+			const canvas = document.getElementById("canvas1");
+			function updateSize(){
+				if(canvas.width != window.innerWidth - 10) canvas.width = window.innerWidth - 10;
+				if(canvas.height != window.innerHeight - 10) canvas.height = window.innerHeight - 10;
+				requestAnimationFrame(updateSize);
+			}
+			updateSize();
+			const ctx = canvas.getContext("2d");
+
+			//change defaults
+			ctx.fillStyle = ctx.strokeStyle = "#FFF";
+			console.log("%cWelcome to BalaM314's canvas sandbox!\n Run %cctx.fillRect(10, 10, 100, 100) %cto test\nRun %cctx.clearRect(0, 0, innerWidth, innerHeight)%c to clear the canvas", "color:blue; font-size:200%;", "font-family:monospace; font-size: 150%;", "color:blue; font-size:200%;", "font-family:monospace; font-size: 150%;", "color:blue; font-size:200%;");
+		</script>
+	</body>
+</html>
