@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML explained</title>
+    <style media="screen">
+      #container {
+        margin: 20px;
+        border: ridge green 10px;
+        padding: 15px;
+        background-color: #FFA;
+        font-size: 20px;
+      }
+      body {
+        margin-top: 0px;
+        background-image: linear-gradient(#0A0, #00E);
+        height: 100%;
+        overflow-y: scroll;
+      }
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      code {
+        background-color: #CC8;
+      }
+      h1 {
+        color: #003;
+      }
+      h2 {
+        color: #F93;
+      }
+      h3 {
+        color: #E02
+      }
+      span h1 {
+        color: #000 !important;
+      }
+      span h2 {
+        color: #000 !important;
+      }
+      span h3 {
+        color: #000 !important;
+      }
+      #samplewebpage {
+        padding: 15px;
+        background-color: #DD8;
+        width: 430px;
+        font-family: monospace;
+      }
+      #samplewebpage p {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <center id="header"><h1>HTML, explained</h1></center>
+      </header>
+      <div id="header-whitespace">
+      </div>
+      <h1>What is HTML?</h1>
+        <p>
+          The HyperText Markup Language, or HTML, is the standard markup language for documents meant to be displayed by a web browser.<br>
+          It consists of tags(example: &lt;p&gt;) that surround the text and tell the browser to display it in different ways.<br>
+          It works with CSS to modify the style of text and JavaScript to make the text interactive.
+        </p>
+      <h1>Elements</h1>
+        <h2>What are elements?</h2>
+        <p>
+          Elements are mostly declared with an opening and closing tag, for example: <code>&lt;p&gt;text&lt;/p&gt;</code><br>
+          Elements can contain text and/or other elements, for example: <code>&lt;span&gt;text &lt;p&gt;more text&lt;/p&gt; &lt;/span&gt;</code><br>
+          Elements can have attributes, which are declared inside the opening tag. For example: <code>&lt;p attribute="value"&gt;text&lt;/p&gt;</code><br>
+          Some elements do not need a closing tag.
+        </p>
+        <h2>Types of elements</h2>
+          <h3>Paragraph element</h3>
+          <div class="paragraph">
+            The simplest element is the <code>&lt;p&gt;</code> element, which represents a paragraph.<br>
+            Most text on a webpage is contained in a &lt;p&gt; element.<br>
+            It does not affect the text, other than adding a margin space between subsequent paragraphs, like this:<br>
+            line 1(not in a paragraph)<br>
+            line 2(not in a paragraph)
+            <p>
+              paragraph 1, line 1<br>
+              paragraph 1, line 2
+            </p>
+            <p>
+              paragraph 2, line 1<br>
+              paragraph 2, line 2
+            </p>
+          </div>
+          <h3>Headers: &lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</h3>
+          <p>
+            The header elements represent headings or subheadings. They come in 6 levels, and the font size decreases on each level.<br>
+            <code>&lt;h1&gt;</code> is typically used for the title, <code>&lt;h2&gt;</code> is typically used for section headings, etc.<br>
+            These elements also have a large margin space.
+          </p>
+          <span>
+            <h1>&lt;h1&gt;</h1>
+            <h2>&lt;h2&gt;</h2>
+            <h3>&lt;h3&gt;</h3>
+            <h4>&lt;h4&gt;</h4>
+            <h5>&lt;h5&gt;</h5>
+            <h6>&lt;h6&gt;</h6>
+          </span>
+          <h3>Lists</h3>
+          <p>
+            HTML supports ordered(<code>&lt;ol&gt;</code>) and unordered(<code>&lt;ul&gt;</code>) lists. They are declared like any other element.<br>
+            To add an item to the list a <code>lt;li&gt</code> element is created within the list element, like this:<br>
+            &lt;ul&gt<br>
+            &lt;li&gtItem 1&lt;\li&gt<br>
+            &lt;li&gtItem 2&lt;\li&gt<br>
+            &lt;\ul&gt<br>
+            An example of both types of lists follows:
+            <ul>
+              <li>This is an unordered list</li>
+              <li>Bullet points go before each list item</li>
+              <li>There is some extra space between each list item</li>
+              <li>The list items are also indented</li>
+            </ul>
+            <ol>
+              <li>This is an ordered list</li>
+              <li>Numbers go before each list item</li>
+              <li>There is some extra space between each list item</li>
+              <li>The list items are also indented</li>
+            </ol>
+          </p>
+          <h3>Formatting elements</h3>
+          <p>
+            Several elements exist for formatting:<br>
+            The <code>&lt;center&gt;</code> element causes elements that it contains to be centered horizontally, like this:<br>
+            <center>Centered Text</center><br>
+            The <code>&lt;strong&gt;</code> element causes its contents to be bold, like this:<br>
+            <strong>Bold Text</strong><br>
+            The <code>&lt;em&gt;</code> element causes its contents to be italic, like this:<br>
+            <em>Italic Text</em><br>
+            There are also two elements that have special uses: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>.<br>
+            These elements do not change the text in any way, they are used as container elements.<br>
+            For example: if you wanted to have one word in a line be red, you would use a &lt;span&gt; element and use CSS to make the span <span>red</span>.<br>
+          </p>
+          <h3>Miscellaneous elements</h3>
+          <p>
+            Some elements that are useful to know are:<br>
+            <ul>
+              <code>&lt;br&gt;</code>, which represents a line break. Browsers do not render new lines from HTML, so to create a new line it is necessary to use <code>&lt;br&gt;</code>. This element does not need a closing tag.<br>
+              <code>&lt;img&gt;</code>, which represents an image.<br>
+              <code>&lt;a&gt;</code>, which represents a hyperlink(to another webpage). The "a" stands for Anchor.<br>
+            </ul>
+          </p>
+        <h2>Types of attributes</h2>
+        Elements can have many different attributes.
+        <ul>
+          <li><code>href</code>, or "Hypertext REFerence", is used to set the destination of a hyperlink</li>
+          <li><code>src</code>, or "source", is used to set the source of many elements, including images and scripts.</li>
+          <li><code>title</code> is used to set the tooltip for an element. <em title="Sample tooltip!">Try mousing over this text.</em></li>
+          <li><code>id</code> is a special identifier for that element. This is useful if you want to target that element to do something with it, either with CSS or JS.</li>
+          <li><code>class</code> is a special identifier for multiple elements. This is useful if you want to target these elements to do something with them, either with CSS or JS.</li>
+        </ul>
+        <h2>Basic structure of a webpage</h2>
+        <p>The basic structure of a webpage is as follows: mouse over the tags to see what they do.</p>
+        <p>For mobile users, <a onclick="tooltips()" id="click" href="#">click here</a> to show the tooltips.</p>
+        The bare minimum:<br>
+        <div id="samplewebpage">
+          <p title="This tells the browser that the document's type is HTML.">&lt;!DOCTYPE html&gt;</p>
+          <p title="The <html> tag is the root tag of a webpage.">&lt;html&gt;</p>
+          <p title="This is the <head> tag. It contains items that are meant for the browser, not the user, like the title."> &lt;head&gt;</p>
+          <p title="This tells the browser that the character encoding of the document is utf-8. You do not need to know what this means, but it should be included in every webpage.">  &lt;meta charset='utf-8'&gt;</p>
+          <p title="This tells the browser what the title of the tab should be.">  &lt;title&gt;Webpage Title&lt;/title&gt;</p>
+          <p title="Close the <head> tag."> &lt;/head&gt;</p>
+          <p title="The <body> tag contains the actual text of the document."> &lt;body&gt;</p>
+          <p title="">  text</p>
+          <p title="Close the <body> tag."> &lt;/body&gt;</p>
+          <p title="Close the <html> tag.">&lt;/html&gt;</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function tooltips(){
+        document.getElementById("samplewebpage").style.width = "600px";
+        for(const element of document.getElementById("samplewebpage").children){
+        	element.innerHTML += `<span style='color: grey; font-size: 12px;'>${element.title.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span>`;
+        }
+        document.getElementById("click").onclick = null;
+      }
+    </script>
+  </body>
+</html>

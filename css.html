@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic CSS explained</title>
+    <style media="screen">
+      #container {
+        margin: 20px;
+        border: ridge green 10px;
+        padding: 15px;
+        background-color: #FFA;
+        font-size: 20px;
+      }
+      body {
+        margin-top: 0px;
+        background-image: linear-gradient(#00FF00, #0000FF);
+        height: 100%;
+        overflow-y: scroll;
+      }
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      code {
+        background-color: #CC8;
+      }
+      h1 {
+        color: #003;
+      }
+      h2 {
+        color: #F93;
+      }
+      h3 {
+        color: #E02
+      }
+      span h1 {
+        color: #000 !important;
+      }
+      span h2 {
+        color: #000 !important;
+      }
+      span h3 {
+        color: #000 !important;
+      }
+      #samplewebpage {
+        padding: 15px;
+        background-color: #DD8;
+        width: 430px;
+        font-family: monospace;
+      }
+      #samplewebpage p {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <center id="header"><h1>CSS, explained</h1></center>
+      </header>
+      <div id="header-whitespace">
+      </div>
+      <h1>What is CSS?</h1>
+        <p>
+          CSS, or Cascading Style Sheets, is the preferred way to style text and elements on webpages made in HTML.<br>
+          At its simplest, it is made up of rules that apply to elements specified by a selector.
+        </p>
+      <h1>How does CSS work?</h1>
+        <h2>What are CSS rules?</h2>
+        <p>
+          CSS rules are created with a property name and property value, separated by a colon, and a semicolon at the end.<br>
+          Example: <code>color: blue;</code><br>
+          The rules modify CSS properties, like color, font, and size.<br>
+          There are hundreds of CSS properties, allowing almost anything about the text to be changed.<br>
+        </p>
+        <h2>What are CSS selectors?</h2>
+        <p>
+          CSS selectors tell the rules what to apply to.<br>
+        </p>
+        <h2>Types of CSS selectors</h2>
+        <p>
+          There are dozens of css selectors, each with a different function and use.<br>
+          The simplest one is just the name of a tag, for example, <code>p</code>.<br>
+          That will select all <code>&lt;p&gt;</code> elements on the page.<br>
+          Another useful one is to select an element based on its id, which is done by <code>#elementid</code>.<br>
+          That will select the element on the page with an id of <code>elementid</code>.<br>
+          Similarly, <code>.classname</code> will select every element on the page with the class of <code>classname</code>.<br>
+          These should be enough for basic webpages.<br>
+        </p>
+        <h2>How is CSS added to a webpage?</h2>
+        <p>
+          There are 3 ways to add css to a webpage: inline, globally in the document, and globally with an external stylesheet. This page will cover the first two methods.<br>
+          Inline CSS is created by setting the style attribute on an element, like this:<br>
+          <code>&lt;div style="css here"&gt;text and &lt;p&gt;elements&lt;/p&gt; that the style will apply to&lt;/div&gt;</code><br>
+          It does not require a selector as it only applies to one element(the element the style attribute was set on).<br>
+          Because it has to be declared on each element, it is clumsy and hard to change.<br>
+          For this reason, it is preferred to use CSS globally.<br>
+          Global CSS is placed in a <code>&lt;style&gt;</code> element inside the <code>&lt;head&gt;</code> element, like this:<br>
+        </p>
+
+        <div id="samplewebpage">
+          ...<br>
+          &lt;head&gt;<br>
+           &lt;style&gt;<br>
+            h1 {<br>
+             color: darkblue;<br>
+             font-family: sans-serif;<br>
+            }<br>
+           &lt;/style&gt;<br>
+          &lt;/head&gt;<br>
+          ...
+        </div>
+        <p>
+          Global CSS is written as above, with a selector, then braces surrounding the rules.<br>
+        </p>
+        <h2>CSS property values</h2>
+        <p>
+          This sections covers the values of CSS properties.
+        </p>
+      </div>
+  </body>
+</html>
