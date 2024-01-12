@@ -30,16 +30,35 @@
 		<canvas width=600 height=600 id="canvas1"></canvas><br>
 		<script type="text/javascript">
 			const canvas = document.getElementById("canvas1");
+			let oldFillStyle;
+			let oldStrokeStyle;
 			function updateSize(){
-				if(canvas.width != window.innerWidth - 10) canvas.width = window.innerWidth - 10;
-				if(canvas.height != window.innerHeight - 10) canvas.height = window.innerHeight - 10;
+				if(oldFillStyle != ctx.fillStyle) changed = true;
+				if(oldStrokeStyle != ctx.strokeStyle) changed = true;
+				oldFillStyle = ctx.fillStyle;
+				oldStrokeStyle = ctx.strokeStyle;
+				if(canvas.width != window.innerWidth - 10){
+					canvas.width = window.innerWidth - 10;
+					if(!changed){
+						ctx.fillStyle = oldFillStyle;
+						ctx.strokeStyle = oldStrokeStyle;
+					}
+				}
+				if(canvas.height != window.innerHeight - 10){
+					canvas.height = window.innerHeight - 10;
+					if(!changed){
+						ctx.fillStyle = oldFillStyle;
+						ctx.strokeStyle = oldStrokeStyle;
+					}
+				}
 				requestAnimationFrame(updateSize);
 			}
-			updateSize();
+			
 			const ctx = canvas.getContext("2d");
 
 			//change defaults
 			ctx.fillStyle = ctx.strokeStyle = "#FFF";
+			updateSize();
 			console.log("%cWelcome to BalaM314's canvas sandbox!\n Run %cctx.fillRect(10, 10, 100, 100) %cto test\nRun %cctx.clearRect(0, 0, innerWidth, innerHeight)%c to clear the canvas", "color:blue; font-size:200%;", "font-family:monospace; font-size: 150%;", "color:blue; font-size:200%;", "font-family:monospace; font-size: 150%;", "color:blue; font-size:200%;");
 		</script>
 	</body>
