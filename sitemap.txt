@@ -5,3 +5,4 @@ https://balam314.github.io/cpu-sim/
 https://balam314.github.io/Einsteinium/
 https://balam314.github.io/ComplexGrapher/
 https://balam314.github.io/
+https://balam314.github.io/canvas.html
