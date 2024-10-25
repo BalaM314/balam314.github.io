@@ -49,6 +49,7 @@
 	font-size: 20px;
 	border: ridge 10px;
 	animation: border-animation 20s infinite alternate linear;
+	min-height: calc(100vh - 2 * (20px + 10px + 15px));
 }
 @media screen and (max-width: 600px) {
 	#container {
@@ -56,11 +57,16 @@
 		padding: 15px 1.5vw;
 		border-width: 2vw;
 		background-color: #0046;
+		min-height: calc(100vh - 2 * (15px + 2vw));
 	}
 	#icon-box {
 		width: 93vw;
 		height: calc(93vw * var(--height) / var(--width));
 	}
+}
+#container footer {
+	padding-top: 15px;
+	color: #999;
 }
 body {
 	margin: 0px;
