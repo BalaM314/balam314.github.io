@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BERRYMAN-LANGFORD MEMETIC KILL AGENT</title>
+	<style>
+		img {
+			width: 100vw;
+			height: 100vh;
+		}
+		html, body {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<img id="img" src="https://scp-wiki.wdfiles.com/local--files/scp-001/fractal-mka.jpeg" alt="Berryman-langford memetic kill agent">
+	<script>
+		if(!confirm('EPILEPSY WARNING!!!\nThis site contains extreme amounts of flashing images. Please exit this site by pressing Cancel if you suffer from photosensitive epilepsy, or if you don\'t like headaches. Press OK to view the site.')){
+			document.body.innerHTML = '<center style="font-size: 12vmin">aborted<center>';
+			throw 'aborted';
+		}
+		const img = document.querySelector('#img');
+		let activateConsoleSpam = false;
+		let activateLogEntries = true;
+		setInterval(() => {
+			img.style.transform = (() => {
+				const r = Math.random();
+				if(r > 0.75) return 'scaleY(-1)';
+				if(r > 0.5) return 'scaleX(-1)';
+				if(r > 0.25) return 'scaleY(-1) scaleX(-1)';
+				return '';
+			})();
+			const deg = Math.floor(Math.random() * 720);
+			img.style.filter = `brightness(${Math.random() + 0.5}) ${deg < 360 ? `hue-rotate(${deg}deg)` : ''}`;
+			if(activateConsoleSpam){
+				let requiredColors = 1;
+				console.log('%c' + Array.from({length: Math.floor(Math.random() * 200 + 100)}, () => {
+					const value = Math.random();
+					if(value < 0.05){
+						requiredColors ++;
+						return '%c';
+					}
+					if(value > 0.75) return String.fromCodePoint(Math.floor(value * 0xFFFF));
+					return String.fromCodePoint(Math.floor(0x20 + (value - 0.05) * (1 / 0.95) * (0x7F - 0x20)));
+				}).filter(c => c !== '%').join(""), ...Array.from({length: requiredColors}, () =>
+					`font-size: ${Math.random() < 0.96 ? Math.floor(70 + Math.random() * 60) : '220'}%;` +
+					`font-family: ${['sans-serif', 'serif', 'monospace', 'fantasy', 'cursive', 'monospace', 'monospace', 'monospace'][Math.floor(Math.random() * 8)]};` +
+					`color: hsl(${Math.floor(Math.random() * 70 - 10)}deg, ${Math.floor(70 + Math.random() * 50)}%, ${Math.floor(50 + Math.random() * 50)}%);` +
+					`background-color: hsl(${Math.floor(Math.random() * 60)}deg, ${Math.floor(20 + Math.random() * 50)}%, ${Math.floor(Math.random() * 20)}%);`
+				));
+			}
+		}, 1000 / 60);
+		setInterval(() => {
+			if(activateLogEntries) console.log(
+				`%c[${new Date().toISOString()}] %c[INFO] DEPLOYED BERRYMAN-LANGFORD MEMETIC KILL AGENT. AWAITING CESSATION OF VITAL SIGNS.`,
+				"font-size: 130%; font-weight: bold; color: white; background-color: black;",
+				"font-size: 130%; font-weight: bold; color: white; background-color: black;",
+			);
+		}, 700);
+
+		let timesAccessed = window.clientInformation.userAgentData ? 0 : 1;
+
+		function onConsoleOpen(){
+			document.getElementById("output").innerHTML = "Yes!";
+			alert("DevTools opened!");
+		}
+		const sensor = new Error();
+		Object.defineProperty(
+			sensor,
+			"message",
+			{
+				get(){
+					timesAccessed ++;
+					if(timesAccessed > 1){
+						console.log(
+							`%c[${new Date().toISOString()}] %c[ERROR] MODIFICATION ATTEMPT DETECTED. INITIATING ANTI-TAMPERING PROCEDURE.`,
+							"font-size: 130%; font-weight: bold; color: white; background-color: black;",
+							"font-size: 130%; font-weight: bold; color: red; background-color: black;",
+						);
+						activateLogEntries = false;
+						setTimeout(() => activateConsoleSpam = true, 2000);
+						return 'MODIFICATION ATTEMPT DETECTED. INITIATING ANTI-TAMPERING PROCEDURE.';
+					}
+					return '';
+				}
+			}
+		);
+		console.log(sensor);
+
+		//Additional trolling
+		const triggers = Array.from({length: 1024}, (_, i) => String.fromCodePoint(i));
+		for(const char of triggers){
+			try {
+				Object.defineProperty(globalThis, char, {
+					get(){
+						console.log(
+							`%c[${new Date().toISOString()}] %c[ERROR] MODIFICATION ATTEMPT DETECTED. INITIATING ANTI-TAMPERING PROCEDURE.`,
+							"font-size: 130%; font-weight: bold; color: white; background-color: black;",
+							"font-size: 130%; font-weight: bold; color: red; background-color: black;",
+						);
+						setTimeout(() => activateConsoleSpam = true, 2000);
+						return 'MODIFICATION ATTEMPT DETECTED. INITIATING ANTI-TAMPERING PROCEDURE.';
+					}
+				});
+			} catch {}
+		}
+	</script>
+</body>
+</html>
