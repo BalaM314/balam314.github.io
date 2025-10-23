@@ -68,6 +68,11 @@
 	padding-top: 15px;
 	color: #999;
 }
+.disabled {
+	text-decoration: line-through;
+	color: gray;
+	pointer-events: none;
+}
 body {
 	margin: 0px;
 	background-image: url("starfield.png");
